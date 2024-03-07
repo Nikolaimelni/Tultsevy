@@ -12034,6 +12034,7 @@ html {
   display: flex;
   justify-content: center;
   gap: 10px;
+  animation: fadeInAndStay 4s ease-in-out forwards;
 }
 
 .time-unit {
