@@ -12027,7 +12027,7 @@ html {
   box-sizing: border-box;
   width: 100%;
   min-height: 100vh;
-  background-image: url("../assets/background.png");
+  background-image: url("../assets/background.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12038,7 +12038,7 @@ html {
   align-items: center;
 }
 .section-background {
-  background-image: url("../assets/background2.png");
+  background-image: url("../assets/background2.webp");
 }
 
 .timer {
@@ -12122,7 +12122,7 @@ html {
   align-items: center;
   position: relative;
   animation: slideAndFade 2s ease-in-out forwards;
-  background-image: url("../assets/paper.png");
+  background-image: url("../assets/paper.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12283,9 +12283,9 @@ html {
 
 .header-leaves-bottom {
   position: absolute;
-  height: 30%;
-  bottom: 0%;
-  right: -4%;
+  height: 40%;
+  bottom: -10%;
+  right: -2%;
   overflow: visible;
   animation: sway 5s ease-in-out infinite;
   animation-delay: 2s;
