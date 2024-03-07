@@ -12023,9 +12023,8 @@ html {
   text-align: center;
 }
 
-.header {
+.header, .section-background {
   box-sizing: border-box;
-  background-color: #8c8c8c;
   width: 100%;
   min-height: 100vh;
   background-image: url("../assets/background.png");
@@ -12037,6 +12036,9 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.section-background {
+  background-image: url("../assets/background2.png");
 }
 
 .timer {
@@ -12101,7 +12103,7 @@ html {
   align-items: center;
   position: relative;
   animation: slideAndFade 2s ease-in-out forwards;
-  background-image: url("../assets/frame2.svg");
+  background-image: url("../assets/frame.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -12110,6 +12112,61 @@ html {
   min-height: 550px;
   max-height: 80vh;
   overflow: visible;
+}
+
+.section-frame {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  animation: slideAndFade 2s ease-in-out forwards;
+  background-image: url("../assets/paper.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90%;
+  max-width: 720px;
+  min-height: 600px;
+  max-height: 90vh;
+  overflow: hidden;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.section-frame h1, .section-frame p {
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.section-frame h1 {
+  font-family: 'Wolfgang', sans-serif;
+  font-size: 46px;
+}
+
+.first-paragraph {
+  margin-bottom: 0;
+}
+
+.section-frame p {
+  font-family: 'Cormorant Infant', sans-serif;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .section-frame p {
+    font-size: 20px;
+  }
+}
+
+.section-frame p:first-child {
+  margin-bottom: 0;
+}
+
+.section-frame h1, .section-frame p {
+  text-align: center;
+  word-wrap: break-word;
 }
 
 @keyframes slideAndFade {
@@ -12239,7 +12296,7 @@ html {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(3deg);
+    transform: rotate(5deg);
   }
 }
 
@@ -12334,112 +12391,28 @@ html {
   }
 }
 
+.header-main {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: auto;
+}
+
 main {
   margin-top: 100vh;
   overflow: hidden;
 }
 
-
-.concertsItem__title {
-  font-weight: bold;
-  color: #000;
+.section-background {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
 }
 
-.concertsItem__date {
-  font-style: italic;
-  color: #666;
-}
 
-.concertsItem__description {
-  color: #333;
-}
-
-.concertsItem__button {
-  white-space: nowrap; /* Убедитесь, что текст кнопки не переносится на новую строку */
-}
-
-/* Дополнительные стили для ссылок на места, чтобы они выделялись */
-a.text-primary {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* Стили для улучшения внешнего вида списка концертов */
-ul.list-unstyled {
-  max-width: 800px; /* Ограничение максимальной ширины списка */
-  margin: 0 auto; /* Выравнивание списка по центру */
-}
-.about .container {
-  max-width: 1560px; 
-  background-color: #106083;
-}
-
-/* Дополнительные стили для заголовка и текста внутри белого блока, если нужно */
-.about h1 {
-  color: #333; /* Цвет заголовка */
-  margin-bottom: 1rem; /* Отступ заголовка от текста */
-}
-
-.about p {
-  color: #555; /* Цвет текста */
-}
-
-.album-card h5, .album-card p {
-  text-align: center;
-}
-
-.album-card a {
-  text-decoration: none;
-  color: black; /* Цвет текста */
-}
-
-.album-card img {
-  border-radius: 5px; /* Скругление углов изображения */
-}
-
-#loadMore {
-  display: block;
-  width: 100%;
-  background-color: #04414d;
-  border-color: #04414d;
-}
-
-.btn-concert {
-  background-color: #04414d;
-  border-color: #04414d;
-}
-
-.btn-concert:hover {
-  background-color: #033a45;
-  border-color: #033a45;
-}
-
-.video-section-custom {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.youtube-video-custom {
-  width:80%;
-  max-width: 1300px;
-  height: 100%;
-}
-
-@media (max-width: 768px) {
-  .youtube-video-custom {
-    width: 100%;
-    height: 70%;
-  }
-}
-
-@media (max-width: 450px) {
-  .youtube-video-custom {
-    width: 100%;
-    height: 50%;
-  }
-}
