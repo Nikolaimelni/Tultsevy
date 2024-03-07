@@ -102,26 +102,20 @@ document.addEventListener("DOMContentLoaded", function() {
         const now = new Date().getTime();
         const distance = targetDate - now;
 
-        // Вычисление времени до события
-        const weeks = Math.floor(distance / (1000 * 60 * 60 * 24 * 7));
-        const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Отображение результата
         countdownElement.innerHTML = `
-            <div class="time-unit">${weeks}<span class="time-label">недель</span></div>
             <div class="time-unit">${days}<span class="time-label">дней</span></div>
             <div class="time-unit">${hours}<span class="time-label">часов</span></div>
             <div class="time-unit">${minutes}<span class="time-label">минут</span></div>
             <div class="time-unit">${seconds}<span class="time-label">секунд</span></div>
         `;
 
-        // Обновление каждую секунду
         setTimeout(updateCountdown, 1000);
 
-        // Проверка, если обратный отсчет закончился
         if (distance < 0) {
             clearInterval(updateCountdown);
             countdownElement.innerHTML = "Событие началось!";
