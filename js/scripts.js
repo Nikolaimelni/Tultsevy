@@ -125,3 +125,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Запуск функции обновления таймера
     updateCountdown();
 });
+window.onload = function() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var name1 = urlParams.get('name');
+    var name2 = urlParams.get('name2');
+    var greeting = document.querySelector('.section-frame h1');
+
+    if (name1 && name2) {
+        greeting.innerHTML = 'Дорогие <br>' + name1 + ' и ' + name2 + '!';
+    } else if (name1) {
+        greeting.innerHTML = 'Дорогой <br>' + name1 + '!';
+    } else {
+        greeting.innerHTML = 'Дорогой Гость!';
+    }
+
+    document.querySelector('.section-background').classList.remove('hidden');
+};
