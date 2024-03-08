@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+            ym(96691369, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true
+            });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/96691369" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Tulstsevy wedding">
@@ -37,92 +53,56 @@
                     <div class="timer" id="countdown"></div>
                 </div>
             </header>
-            <main class="flex-shrink-0">
-                <section class="hidden section-background">
+            <main class="flex-shrink-0 main-background">
+                <section class="hidden section-container">
                     <div class="section-frame">
                         <h1>Дорогой <br>Гость!</h1>
-                        <p class="first-paragraph">Мы рады сообщить Вам, что 20.07.2024 состоится наша свадьба!</p>
-                        <p>Торжественная церемония бракосочетания начнется в 15:00 в ЗАГС Выборгского района по адресу Институтский проспект, дом 8</p>
-                        <h1>Ждем Вас!</h1>
+                        <p class="first-paragraph">Мы рады сообщить вам, что 20.07.2024 состоится наша свадьба!</p>
+                        <p>Торжественная церемония бракосочетания начнется в 15:00 в ЗАГС Выборгского района по адресу Институтский пр., д. 8</p>
+                        <h1>Ждем вас!</h1>
                         <h1>Ваши Жених<br>и Невеста</h1>
                     </div>                  
                 </section>
-            <!-- <div class="container hidden" id="contact">
-                <section class="py-5">
-                    <div class="container">
-                        <div class="bg-light rounded-4 py-5 px-4 px-md-5">
-                            <div class="text-center mb-5">
-                                <a class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3" href="mailto:nikolai.melnichenko.fe@gmail.com"><i class="bi bi-envelope"></i></a>
-                                <h1 class="fw-bolder">Get in touch</h1>
-                                <p class="lead fw-normal text-muted mb-0">Let's work together!</p>
+                <section class="hidden section-container">
+                    <div class="section-frame">
+                        <h1 class="section-title">Расписание свадебного дня</h1>
+                            <div class="description">
+                                <time class="time"><h3 class="event-time">15:00</h3></time>
+                                <h3 class="event-title">Торжественная роспись</h3>
                             </div>
-                            <div class="row gx-5 justify-content-center">
-                                <div class="col-lg-8 col-xl-6">
-                                    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xyyrkzpq" method="post">
-                                        <fieldset id="fs-frm-inputs">
-                                            <div class="form-floating mb-3">
-                                                <input 
-                                                  class="form-control" 
-                                                  name="name" 
-                                                  id="full-name" 
-                                                  type="text" 
-                                                  placeholder="Enter your name" 
-                                                  required 
-                                                />
-                                                <label for="full-name">Full name</label>
-                                                <div class="invalid-feedback">A name is required.</div>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <input 
-                                                  class="form-control" 
-                                                  type="email" name="_replyto" 
-                                                  id="email-address" 
-                                                  placeholder="name@example.com" 
-                                                  required 
-                                                />
-                                                <label for="email-address">Email address</label>
-                                                <div class="invalid-feedback">A valid email is required.</div>
-                                            </div>
-                                            <div class="form-floating mb-3">
-                                                <textarea 
-                                                  class="form-control" 
-                                                  name="message" 
-                                                  id="message" 
-                                                  placeholder="Enter your message here" 
-                                                  style="height: 10rem" 
-                                                  required 
-                                                  minlength="10"
-                                                ></textarea>
-                                                <label for="message">Message</label>
-                                                <div class="invalid-feedback">A message is required (minimum 10 characters).</div>
-                                            </div>
-                                            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-                                        </fieldset>
-                                        <input type="submit" class="btn btn-primary btn-lg" id="submitButton" value="Submit">
-                                        <div class="d-none" id="submitSuccessMessage">
-                                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                                            <div class="text-center mb-3">
-                                                <div class="fw-bolder">Form submission successful!</div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                            <div class="event-description mb-2">После росписи вас доставит до банкетного зала автобус.</div>
+                        <div class="description mb-4">
+                            <time class="time"><h3>17:00</h3></time>
+                            <h3>Банкет</h3>
                         </div>
-                    </div>
-                </section>
-            </div> -->
+                        <h1 class="section-title">Подтвердите ваше участие</h1>
+                        <p class="mb-0">Мы будем рады видеть вас на нашем торжестве!</p>
+                        <div>
+                            <form id="confirmation-form" accept-charset="utf-8" action="https://formspree.io/f/xyyrkzpq" method="post">
+                                <input type="hidden" name="_subject" value="Wedding Attendance Confirmation">
+                                <input type="hidden" name="name" id="guest-name">
+                                    <div data-mdb-input-init class="form-outline mb-2">
+                                    <label class="form-label" for="submition">Пожалуйста, сообщите нам дополнительную информацию при необходимости</label>
+                                    <textarea class="form-control" name="additional_info" id="submition" rows="2"></textarea>
+                                    </div>
+                                <input type="submit" class="btn btn-primary btn-lg submit-button" value="Подтвердить">
+                            </form>
+                        </div>
+                    </div>                  
+                </section> 
+                <section class="hidden section-container">
+                    <div class="section-frame">
+                        <h1 class="section-title">Ждём вас по адресу</h1>
+                        <div class="map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Afc4b2ce9667bf0362555d34fbd85d42fd3f0f43d49ceb3be28e2de8caca20269&amp;source=constructor" width="667" height="437" frameborder="0"></iframe>                        </div>
+                    </div>   
+                    <div class="container px-5 disclaimer mb-3">
+                        <a class="text-secondary" href="https://www.nikolaidev.online">
+                            nikolaidev.online
+                        </a>
+                    </div>            
+                </section> 
         </main>
-        <!-- Footer-->
-        <!-- <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5 disclaimer">
-                <a class="text-secondary" href="https://www.nikolaidev.online">
-                    nikolaidev.online
-                </a>
-                <br>
-                Montenegro, 2024
-            </div>
-        </footer> -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>

@@ -1,15 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const navbarCollapse = document.querySelector(".navbar-collapse");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    navLinks.forEach(function(link) {
-        link.addEventListener("click", function() {
-            navbarCollapse.classList.remove("show");
-        });
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
     const elementsToAnimate = document.querySelectorAll('.hidden');
 
     function checkVisibility() {
@@ -25,75 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener('scroll', checkVisibility);
 });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     const form = document.getElementById("fs-frm");
-//     const emailInput = document.getElementById("email-address");
-//     const successMessage = document.getElementById("submitSuccessMessage");
-//     const errorMessage = document.getElementById("submitErrorMessage");
-
-//     form.addEventListener("submit", (e) => {
-//         e.preventDefault();
-
-//         resetValidationStates();
-
-//         let isValid = true;
-
-//         if (!form.checkValidity()) {
-//             showValidationErrors();
-//             isValid = false;
-//         }
-
-//         if (!validateEmail(emailInput.value)) {
-//             emailInput.classList.add("is-invalid");
-//             isValid = false;
-//         }
-
-//         if (!isValid) {
-//             return;
-//         }
-
-//         const formData = new FormData(form);
-
-//         const xhr = new XMLHttpRequest();
-//         xhr.open("POST", "https://formspree.io/f/xyyrkzpq", true);
-//         xhr.setRequestHeader("Accept", "application/json");
-
-//         xhr.onload = () => {
-//             if (xhr.status === 200) {
-//                 successMessage.classList.remove("d-none");
-//                 errorMessage.classList.add("d-none");
-//             } else {
-//                 errorMessage.textContent = "There was an error submitting the form. Please try again.";
-//                 errorMessage.classList.remove("d-none");
-//             }
-//         };
-
-//         xhr.onerror = () => {
-//             errorMessage.textContent = "There was a network error. Please check your internet connection and try again.";
-//             errorMessage.classList.remove("d-none");
-//         };
-
-//         xhr.send(formData);
-//     });
-
-//     const resetValidationStates = () => {
-//         form.querySelectorAll(".form-control").forEach(input => {
-//             input.classList.remove("is-invalid");
-//         });
-//     };
-
-//     const showValidationErrors = () => {
-//         form.querySelectorAll(":invalid").forEach(input => {
-//             input.classList.add("is-invalid");
-//         });
-//     };
-
-//     const validateEmail = (email) => {
-//         const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-//         return re.test(email.toLowerCase());
-//     }
-// });
 
 document.addEventListener("DOMContentLoaded", function() {
     function updateCountdown() {
@@ -122,22 +42,55 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Запуск функции обновления таймера
     updateCountdown();
 });
-window.onload = function() {
-    var urlParams = new URLSearchParams(window.location.search);
-    var name1 = urlParams.get('name');
-    var name2 = urlParams.get('name2');
-    var greeting = document.querySelector('.section-frame h1');
 
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const name1 = urlParams.get('name');
+    const name2 = urlParams.get('name2');
+
+    // Обновление приветствия
+    const greeting = document.querySelector('.section-container:first-of-type .section-frame h1');
     if (name1 && name2) {
         greeting.innerHTML = 'Дорогие <br>' + name1 + ' и ' + name2 + '!';
     } else if (name1) {
         greeting.innerHTML = 'Дорогой <br>' + name1 + '!';
-    } else {
-        greeting.innerHTML = 'Дорогой Гость!';
     }
+    document.querySelectorAll('.section-container').forEach(function(section) {
+        section.classList.remove('hidden');
+    });
 
-    document.querySelector('.section-background').classList.remove('hidden');
+    const form = document.getElementById("confirmation-form");
+    const guestNameInput = document.getElementById("guest-name");
+    let guestName = "Гость";
+    if (name1) {
+        guestName = name1;
+        if (name2) {
+            guestName += " и " + name2;
+        }
+    }
+    guestNameInput.value = guestName + " подтвердил(а) свое присутствие.";
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch("https://formspree.io/f/mayrbjbe", {
+            method: "POST",
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            },
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Спасибо за подтверждение вашего присутствия!");
+            } else {
+                alert("Произошла ошибка. Пожалуйста, попробуйте снова.");
+            }
+        })
+        .catch(error => {
+            alert("Произошла ошибка сети. Пожалуйста, проверьте ваше интернет-соединение и попробуйте снова.");
+        });
+    });
 };

@@ -3018,15 +3018,15 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #04414d;
-  --bs-btn-border-color: #04414d;
+  --bs-btn-bg: #215920;
+  --bs-btn-border-color: #215920;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #4f7a82;
-  --bs-btn-hover-border-color: #4f7a82;
+  --bs-btn-hover-bg: #5c885b;
+  --bs-btn-hover-border-color: #5c885b;
   --bs-btn-focus-shadow-rgb: 64, 79, 245;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #4f7a82;
-  --bs-btn-active-border-color: #4f7a82;
+  --bs-btn-active-bg: #5c885b;
+  --bs-btn-active-border-color: #5c885b;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #63DC90;
@@ -12037,8 +12037,25 @@ html {
   justify-content: center;
   align-items: center;
 }
-.section-background {
+
+.main-background {
+  width: 100%;
+  min-height: 100vh;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
   background-image: url("../assets/background2.webp");
+  background-attachment: fixed;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .timer {
@@ -12112,46 +12129,6 @@ html {
   min-height: 550px;
   max-height: 80vh;
   overflow: visible;
-}
-
-.section-frame {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
-  animation: slideAndFade 2s ease-in-out forwards;
-  background-image: url("../assets/paper.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 90%;
-  max-width: 720px;
-  min-height: 600px;
-  max-height: 90vh;
-  overflow: hidden;
-  margin: 10px;
-  box-sizing: border-box;
-}
-
-.section-frame h1, .section-frame p {
-  text-align: center;
-  word-wrap: break-word;
-}
-
-.section-frame h1 {
-  font-family: 'Wolfgang', sans-serif;
-  font-size: 46px;
-}
-
-.first-paragraph {
-  margin-bottom: 0;
-}
-
-.section-frame p {
-  font-family: 'Cormorant Infant', sans-serif;
-  font-size: 24px;
 }
 
 @media (max-width: 768px) {
@@ -12416,3 +12393,102 @@ main {
 }
 
 
+.section-frame {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  animation: slideAndFade 2s ease-in-out forwards;
+  background-image: url("../assets/paper.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90%;
+  max-width: 720px;
+  min-height: 600px;
+  max-height: 90vh;
+  overflow: hidden;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.section-frame h1, .section-frame p, .section-frame h3 {
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.section-frame h1, .section-frame h3 {
+  font-family: 'Wolfgang', sans-serif;
+  font-size: 46px;
+}
+
+.section-frame h3 {
+  font-size: 36px;
+}
+
+.first-paragraph {
+  margin-bottom: 0;
+}
+
+.section-frame p {
+  font-family: 'Cormorant Infant', sans-serif;
+  font-size: 24px;
+}
+
+
+.time {
+  margin-right: 30px; 
+  margin-left: 10px;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  width: 100%;
+}
+
+.section-title {
+  font-family: 'Wolfgang', sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  font-family: 'Cormorant Infant', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+.event-description{
+  font-family: 'Cormorant Infant', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .section-frame h1 {
+    font-size: 34px;
+  }
+  .section-frame h3 {
+    font-size: 26px;
+  }
+  .section-frame p {
+    font-size: 18px;
+  }
+}
+
+.submit-button {
+  width: 100%;
+  min-width: 160px;
+  font-family: 'Cormorant Infant', sans-serif;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  max-width: 95%;
+}
