@@ -47,16 +47,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
-    const name1 = urlParams.get('name');
-    const name2 = urlParams.get('name2');
+    const names = [
+        urlParams.get('name'), 
+        urlParams.get('name2'), 
+        urlParams.get('name3'), 
+        urlParams.get('name4')
+    ].filter(Boolean);
 
-    // Обновление приветствия
+    const processedNames = names.map(name => name.replace(/_/g, ' '));
+
     const greeting = document.querySelector('.section-container:first-of-type .section-frame h1');
-    if (name1 && name2) {
-        greeting.innerHTML = 'Дорогие <br>' + name1 + ' и ' + name2 + '!';
-    } else if (name1) {
-        greeting.innerHTML = 'Дорогой <br>' + name1 + '!';
+    if (processedNames.length > 0) {
+        const femaleNames = ["Галина Васильевна", "Лина", "Анастасия", "Александра", "Екатерина", "Валерия", "Кристина", "Алёна", "Любовь", "Вероника", "Алина", "Олеся", "Алеся", "Ульяна", "Оксана", "Юлия", "Наталья"];
+        let greetingPrefix = 'Дорогие';
+        if (processedNames.length === 1) {
+            greetingPrefix = femaleNames.includes(processedNames[0]) ? 'Дорогая' : 'Дорогой';
+        }
+
+        let namesString;
+        if (processedNames.length > 2) {
+            namesString = processedNames.slice(0, -1).join(', ') + ' и ' + processedNames.slice(-1);
+        } else if (processedNames.length === 2) {
+            namesString = processedNames.join(' и ');
+        } else {
+            namesString = processedNames[0];
+        }
+        
+        greeting.innerHTML = `${greetingPrefix} <br>${namesString}!`;
     }
+
     document.querySelectorAll('.section-container').forEach(function(section) {
         section.classList.remove('hidden');
     });
@@ -64,11 +83,14 @@ window.onload = function() {
     const form = document.getElementById("confirmation-form");
     const guestNameInput = document.getElementById("guest-name");
     let guestName = "Гость";
-    if (name1) {
-        guestName = name1;
-        if (name2) {
-            guestName += " и " + name2;
+    if (processedNames.length > 0) {
+        let guestNameString;
+        if (processedNames.length > 2) {
+            guestNameString = processedNames.slice(0, -1).join(', ') + ' и ' + processedNames.slice(-1);
+        } else {
+            guestNameString = processedNames.join(' и ');
         }
+        guestName = guestNameString;
     }
     guestNameInput.value = guestName + " подтвердил(а) свое присутствие.";
 
