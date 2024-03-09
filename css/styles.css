@@ -12200,6 +12200,11 @@ html {
   flex-direction: column;
   height: 60%;
   margin-bottom: 0;
+  overflow: visible;
+}
+
+.header-names p {
+  overflow: visible;
 }
 
 .name-svg, .and-svg {
