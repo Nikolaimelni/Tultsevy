@@ -97,7 +97,7 @@ window.onload = function() {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         const formData = new FormData(form);
-        fetch("https://formspree.io/f/mayrbjbe", {
+        fetch("https://formspree.io/f/xgegzzvz", {
             method: "POST",
             body: formData,
             headers: {
