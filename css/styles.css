@@ -12203,8 +12203,8 @@ html {
   overflow: visible;
 }
 
-.header-names p {
-  overflow: visible;
+.name-svg {
+    line-height: 3rem;
 }
 
 .name-svg, .and-svg {
