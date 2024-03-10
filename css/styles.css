@@ -12045,7 +12045,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 2;
-  background-image: url("../assets/background2.webp");
+  background-image: url("../assets/background3.webp");
   background-attachment: fixed;
 }
 
@@ -12492,4 +12492,17 @@ main {
   display: flex;
   justify-content: center;
   max-width: 95%;
+}
+
+.contact-info {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.phone-number {
+  color: black;
+}
+
+.phone-number:visited {
+  color: black;
 }
