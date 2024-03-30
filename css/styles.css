@@ -12242,9 +12242,10 @@ html {
   height: 40%;
   display: flex;
   align-items: center;
-  transform: translateY(-60%);
+  transform: translateY(-40%);
   animation: fadeInAndStay 2s ease-in-out forwards;
   animation-delay: 2s;
+  margin-bottom: 20%;
 }
 
 .date-svg {
