@@ -12478,13 +12478,15 @@ main {
   }
 }
 
+.section-frame .contact-info {
+  font-size: 16px;
+}
 
 @media (max-width: 380px) {
   .section-frame h3 {
     font-size: 10px;
   }
-
-  .section-frame p {
+  .section-frame .contact-info {
     font-size: 12px;
   }
 }
