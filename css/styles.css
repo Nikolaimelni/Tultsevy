@@ -43,7 +43,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 30, 48, 243;
-  --bs-secondary-rgb: 35,139,73;
+  --bs-secondary-rgb: 122,	130,	82;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -3018,8 +3018,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #215920;
-  --bs-btn-border-color: #215920;
+  --bs-btn-bg: #7A8252;
+  --bs-btn-border-color: #7A8252;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #5c885b;
   --bs-btn-hover-border-color: #5c885b;
@@ -12257,8 +12257,8 @@ html {
 .header-leaves-up {
   position: absolute;
   height: 40%;
-  top: -10%;
-  left: -10%;
+  top: -12%;
+  left: -8%;
   animation: sway 5s ease-in-out infinite;
   animation-delay: 2s;
   overflow: hidden;
@@ -12268,7 +12268,7 @@ html {
   position: absolute;
   height: 40%;
   bottom: -10%;
-  right: -2%;
+  right: -5%;
   overflow: visible;
   animation: sway 5s ease-in-out infinite;
   animation-delay: 2s;
@@ -12464,7 +12464,7 @@ main {
   text-align: center;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 640px) {
   .section-frame h1 {
     font-size: 16px;
     line-height: 2.4rem;
@@ -12475,6 +12475,22 @@ main {
   }
   .section-frame p {
     font-size: 18px;
+  }
+  .section-frame .section-address {
+    line-height: 2.9rem;
+  }
+  .section-frame .section-par-address {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 340px) {
+  .section-frame .section-address {
+    font-size: 14px;
+    line-height: 2.9rem;
+  }
+  .section-frame .section-par-address {
+    font-size: 12px;
   }
 }
 
