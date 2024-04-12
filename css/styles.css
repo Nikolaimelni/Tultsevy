@@ -12174,7 +12174,7 @@ html {
     opacity: 0;
   }
   to {
-    transform: translateX(5%) translateY(-55%);
+    transform: translateX(15%) translateY(-55%);
     opacity: 1;
   }
 }
@@ -12182,6 +12182,11 @@ html {
 @keyframes fadeInAndStay {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes halfFadeInAndStay {
+  from { opacity: 0; }
+  to { opacity: 0.5; }
 }
 
 .header-date {
@@ -12233,8 +12238,8 @@ html {
 
 .and-svg {
   font-size: 1.5rem; 
-  transform: translateY(-15%) translateX(160%);
-  animation: fadeInAndStay 1.5s ease-in-out forwards;
+  transform: translateY(-80%) translateX(20%);
+  animation: halfFadeInAndStay 1.5s ease-in-out forwards;
   animation-delay: 1.5s;
 }
 
